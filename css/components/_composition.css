@@ -1,0 +1,6 @@
+Undefined variable.
+  ╷
+8 │     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+  │                                    ^^^^^^^^^^^^
+  ╵
+  e:\Natures\sass\components\_composition.scss 8:36  root stylesheet
