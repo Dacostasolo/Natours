@@ -1,0 +1,6 @@
+Undefined variable.
+  ╷
+2 │   padding: 0 $grid-container-padding;
+  │              ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+  e:\Natures\sass\layouts\_grid.scss 2:14  root stylesheet

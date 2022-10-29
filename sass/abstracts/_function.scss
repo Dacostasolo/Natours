@@ -1,0 +1,5 @@
+@function gridColWidth($numSpace, $numCols) {
+  @return calc(
+    (100% - #{$numSpace} * #{$grid-horizontal-gutter}) / #{$numCols}
+  );
+}

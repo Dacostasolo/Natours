@@ -1,0 +1,50 @@
+.container {
+  padding: 0 $grid-container-padding;
+}
+
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $grid-vertical-gutter;
+  }
+
+  @include clearFix;
+
+  [class^='col-'] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $grid-horizontal-gutter;
+    }
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  .col-6 {
+    width: gridColWidth(1, 2);
+  }
+
+  .col-4 {
+    width: gridColWidth(2, 3);
+  }
+
+  .col-3 {
+    width: gridColWidth(3, 4);
+  }
+
+  .col-2 {
+    width: gridColWidth(5, 6);
+  }
+
+  .col-1 {
+    width: gridColWidth(11, 12);
+  }
+
+  .col {
+    margin-left: $grid-horizontal-gutter;
+  }
+}

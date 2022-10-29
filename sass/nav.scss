@@ -1,0 +1,130 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+//variables
+$color-primary: #f3b408;
+$color-tertiary: #f3085e;
+$color-secondary: #080ec3;
+$color-text-dark: #333;
+$color-text-light: #eee;
+
+$font-medium: 1.5rem;
+
+$btn-width: 15rem;
+$drop-down-width: 20rem;
+
+//mixins
+
+//placeholders
+%btn-placeholder {
+  border-radius: 100px;
+  color: $color-text-light;
+  padding: 1rem 2rem;
+  width: $btn-width;
+  text-align: center;
+}
+//functions
+@function divide($first, $second) {
+  @return $first/$second;
+}
+
+//styles
+nav {
+  background-color: $color-primary;
+  //   margin: divide(20, 1) * 1px;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+ul {
+  list-style: none;
+  float: left;
+
+  li {
+    position: relative;
+    float: left;
+    color: $color-text-dark;
+  }
+}
+
+a {
+  display: inline-block;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: $font-medium;
+  text-decoration: none;
+  color: $color-text-dark;
+
+  &:focus + .dropdown {
+    display: block;
+  }
+}
+
+.btns {
+  float: right;
+}
+
+.btn-main {
+  @extend %btn-placeholder;
+  &:link {
+    background-color: $color-tertiary;
+  }
+
+  &:hover {
+    background-color: darken($color-tertiary, 15%);
+  }
+}
+
+.btn-hot {
+  @extend %btn-placeholder;
+  &:link {
+    background-color: $color-secondary;
+  }
+
+  &:hover {
+    background-color: lighten($color-secondary, 15%);
+  }
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  width: $drop-down-width;
+  background-color: lighten($color-text-dark, 10%);
+  margin-left: 1rem;
+
+  &:hover {
+    display: block;
+  }
+
+  li {
+    display: block;
+    float: none;
+    width: $drop-down-width;
+
+    &:hover {
+      background-color: $color-tertiary;
+    }
+  }
+
+  a {
+    color: $color-text-light;
+    margin: 0;
+  }
+}

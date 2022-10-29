@@ -1,0 +1,6 @@
+Undefined variable.
+   ╷
+10 │   font-size: $root-font-size;
+   │              ^^^^^^^^^^^^^^^
+   ╵
+  e:\Natures\sass\base\_base.scss 10:14  root stylesheet
