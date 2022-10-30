@@ -1,0 +1,6 @@
+Undefined variable.
+  ╷
+2 │   background-color: rgba($color-light, 0.8);
+  │                          ^^^^^^^^^^^^
+  ╵
+  e:\Natures\sass\components\_feature-box.scss 2:26  root stylesheet

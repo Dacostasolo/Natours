@@ -1,0 +1,6 @@
+Undefined variable.
+   ╷
+16 │     box-shadow: $shadow-one;
+   │                 ^^^^^^^^^^^
+   ╵
+  e:\Natures\sass\components\_card.scss 16:17  root stylesheet

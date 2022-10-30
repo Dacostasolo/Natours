@@ -1,6 +1,6 @@
 Undefined variable.
   ╷
-8 │     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
-  │                                    ^^^^^^^^^^^^
+6 │     box-shadow: $shadow-one;
+  │                 ^^^^^^^^^^^
   ╵
-  e:\Natures\sass\components\_composition.scss 8:36  root stylesheet
+  e:\Natures\sass\components\_composition.scss 6:17  root stylesheet
