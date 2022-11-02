@@ -1,0 +1,123 @@
+.navigation {
+  &__icon {
+    position: absolute;
+    @include centerBlock;
+    color: $color-grey-dark-3;
+  }
+
+  &__button {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    background-color: $color-light;
+    display: block;
+    z-index: 1000;
+  }
+
+  &__background {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 100;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__label {
+    position: absolute;
+    @include centerBlock;
+  }
+
+  &__box {
+    position: fixed;
+    height: 100vh;
+    //width: 100vw;
+    z-index: 150;
+    top: 0;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+  }
+
+  &__list {
+    list-style: none;
+    position: absolute;
+    @include centerBlock;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 1.5rem;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(100);
+    -webkit-transform: scale(100);
+    -moz-transform: scale(100);
+    -ms-transform: scale(100);
+    -o-transform: scale(100);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: $color-light;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-light 50%
+      );
+      background-size: 220%;
+
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      display: inline-block;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+    }
+  }
+
+  &__checkbox:checked ~ &__box {
+    width: 100vw;
+    opacity: 1;
+  }
+}

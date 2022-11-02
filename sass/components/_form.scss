@@ -92,9 +92,8 @@
       border: 3px solid $color-primary;
       border-radius: 50%;
       position: absolute;
-      top: 50%;
+      @include centerBlock;
       left: 1rem;
-      transform: translate(-50%, -50%);
       transition: opacity 0.3s ease;
 
       &::after {
@@ -104,9 +103,7 @@
         height: 1.5rem;
         border-radius: 50%;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include centerBlock;
         background-color: $color-primary;
         opacity: 0;
       }

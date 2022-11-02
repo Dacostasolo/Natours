@@ -1,0 +1,23 @@
+{
+  "name": "natures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass sass/main.scss css/main.css -w --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dacostasolo/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dacostasolo/Natours/issues"
+  },
+  "homepage": "https://github.com/Dacostasolo/Natours#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
