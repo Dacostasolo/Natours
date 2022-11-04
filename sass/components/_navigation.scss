@@ -1,10 +1,4 @@
 .navigation {
-  &__icon {
-    position: absolute;
-    @include centerBlock;
-    color: $color-grey-dark-3;
-  }
-
   &__button {
     width: 7rem;
     height: 7rem;
@@ -15,29 +9,20 @@
     background-color: $color-light;
     display: block;
     z-index: 1000;
+    text-align: center;
+    box-shadow: $shadow-two;
   }
 
   &__background {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark
-    );
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
     z-index: 100;
     transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
   }
 
   &__checkbox {
@@ -59,10 +44,6 @@
     width: 0;
     opacity: 0;
     transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
   }
 
   &__list {
@@ -78,10 +59,6 @@
 
   &__checkbox:checked ~ &__background {
     transform: scale(100);
-    -webkit-transform: scale(100);
-    -moz-transform: scale(100);
-    -ms-transform: scale(100);
-    -o-transform: scale(100);
   }
 
   &__link {
@@ -93,19 +70,10 @@
       color: $color-light;
       font-weight: 300;
       padding: 1rem 2rem;
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        $color-light 50%
-      );
-      background-size: 220%;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-light 50%);
+      background-size: 230%;
 
       transition: all 0.5s ease;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
       display: inline-block;
     }
 
@@ -119,5 +87,64 @@
   &__checkbox:checked ~ &__box {
     width: 100vw;
     opacity: 1;
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      content: "";
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-3;
+      transition: all 0.2s;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+    }
+
+    &::before {
+      top: 0.8rem;
+    }
+
+    &::after {
+      top: -0.8rem;
+    }
+  }
+
+  &__checkbox:checked ~ &__button &__icon::before {
+    transform: rotate(-135deg);
+    top: 0;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+  }
+
+  &__checkbox:checked ~ &__button &__icon::after {
+    transform: rotate(135deg);
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+  }
+
+  &__checkbox:checked ~ &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__button:hover &__icon::before {
+    top: 1rem;
+  }
+  &__button:hover &__icon::after {
+    top: -1rem;
   }
 }
