@@ -39,3 +39,18 @@ $default-section-margin-top: -10rem;
 //shadows
 $shadow-one: 0 1.5rem 4rem rgba($color-black, 0.15);
 $shadow-two: 0 2.5rem 4rem rgba($color-black, 0.6);
+
+//iem = 16px
+//responsive breakpoints
+$respond-phone-small: 20em; //320
+$respond-phone: 37.5em; //600
+$respond-tablet: 56.25em; //900
+$respond-desktop: 75em; //1200
+$respond-big-desktop: 112.5em; //1800
+
+//responsive breakpoint names
+$phone-small: phone-small;
+$phone: phone;
+$tablet: tablet;
+$desktop: desktop;
+$big-desktop: big-desktop;

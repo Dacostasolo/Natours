@@ -4,7 +4,11 @@
 
 .row {
   max-width: $grid-width;
-  // margin: 0 auto;
+  margin: 0 auto;
+
+  @include responsive($tablet) {
+    max-width: 60rem;
+  }
 
   &:not(:last-child) {
     margin-bottom: $grid-vertical-gutter;
@@ -12,11 +16,20 @@
 
   @include clearFix;
 
-  [class^='col-'] {
+  [class^="col-"] {
     float: left;
 
     &:not(:last-child) {
       margin-right: $grid-horizontal-gutter;
+
+      @include responsive($tablet) {
+        margin-right: 0;
+        margin-bottom: $grid-vertical-gutter;
+      }
+    }
+
+    @include responsive($tablet) {
+      width: 100% !important;
     }
   }
 

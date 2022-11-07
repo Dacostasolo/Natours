@@ -24,27 +24,15 @@
       transform: rotateY(180deg);
 
       &-one {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        );
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
       }
 
       &-two {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        );
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
       }
 
       &-three {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        );
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
       }
     }
   }
@@ -66,31 +54,19 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &-one {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        ),
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
         url(../img/nat-5.jpg);
       background-blend-mode: screen;
     }
 
     &-two {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        ),
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
         url(../img/nat-6.jpg);
       background-blend-mode: screen;
     }
 
     &-three {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        ),
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
         url(../img/nat-7.jpg);
       background-blend-mode: screen;
     }
@@ -103,14 +79,16 @@
     top: 12rem;
     right: 2rem;
     text-align: right;
-    width: 75%;
+    width: 80%;
     text-transform: uppercase;
+
   }
 
   &__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+    
 
     &--one {
       background-image: linear-gradient(

@@ -1,7 +1,7 @@
 //clearing float
 @mixin clearFix {
   &::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -15,4 +15,36 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+
+@mixin responsive($responsiveName) {
+  @if $responsiveName == $phone-small {
+    @media only screen and (max-width: $respond-phone-small) {
+      @content;
+    }
+  }
+
+  @if $responsiveName == $phone {
+    @media only screen and (max-width: $respond-phone) {
+      @content;
+    }
+  }
+
+  @if $responsiveName == $tablet {
+    @media only screen and (max-width: $respond-tablet) {
+      @content;
+    }
+  }
+
+  @if $responsiveName == $desktop {
+    @media only screen and (max-width: $respond-desktop) {
+      @content;
+    }
+  }
+
+  @if $responsiveName == $big-desktop {
+    @media only screen and (min-width: $respond-big-desktop) {
+      @content;
+    }
+  }
 }
